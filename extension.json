@@ -1,0 +1,30 @@
+{
+    "name": "AcePortableInfobox",
+    "author": [
+        "1F616EMO"
+    ],
+    "url": "https://github.com/Emojigit/mediawiki-extensions-AcePortableInfobox",
+    "description": "Use Ace Editor on Portable Infoboxes",
+    "license-name": "GPL-2.0-or-later",
+	"type": "editor",
+	"requires": {
+		"extensions": {
+			"WikiEditor": "*"
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\AcePortableInfobox\\": "includes/"
+	},
+	"Hooks": {
+		"CodeEditorGetPageLanguage": "codeeditor"
+	},
+	"HookHandlers": {
+		"codeeditor": {
+			"class": "MediaWiki\\Extension\\AcePortableInfobox\\CodeEditorHooks",
+			"services": [
+				"MainConfig"
+			]
+		}
+	},
+    "manifest_version": 2
+}
